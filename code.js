@@ -1,4 +1,6 @@
-/* Quiz Game */
+// -- Quiz Game --
+// Web and API Design @ Kristiania University College
+// Ole Algoritme, 2020
 
 let quiz = null;
 let question = null;
