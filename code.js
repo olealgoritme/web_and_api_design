@@ -118,7 +118,7 @@ quiz = new Quiz(question, answers, correctAnswerIdx);
 quizes.push(quiz);
 resetState();
 
-// #4 What is 8+8*3
+// #4 Math question
 question = "What is 8+8*(4-2)";
 answers = [ "64", "28", "32", "30" ];
 correctAnswerIdx = 2; // index is 0-based
