@@ -50,11 +50,12 @@ class Quiz {
     }
 }
 
-function parseQuiz(quiz) {
-    console.log("Question: " + quiz.question);
-    console.log("Answers: " + quiz.answers);
-    console.log("Correct answer Index: " + quiz.correctAnswerIdx);
-    console.log("Correct answer (String): " + quiz.correctAnswer());
+function printQuiz(quiz) {
+    console.log(
+    "Question: " + quiz.question + "\n"
+    "Answers: " + quiz.answers + "\n"
+    "Correct answer Index: " + quiz.correctAnswerIdx + "\n"
+    "Correct answer (String): " + quiz.correctAnswer());
 }
 
 function addQuizToHTML(quiz) {
@@ -68,7 +69,7 @@ function addQuizToHTML(quiz) {
     quiz.answers.forEach(function(answer) {
         let answerButton = document.createElement('button');
         answerButton.innerHTML = answer;
-        
+
         // Add listeners for both correct and wrong answers
         // Show appropriate alert message
         if (answer === quiz.answers[quiz.correctAnswerIdx]) 
