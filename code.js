@@ -68,10 +68,18 @@ function addQuizToHTML(quiz) {
     quiz.answers.forEach(function(answer) {
         let answerButton = document.createElement('button');
         answerButton.innerHTML = answer;
+        
+        // Add listeners for both correct and wrong answers
+        // Show appropriate alert message
         if (answer === quiz.answers[quiz.correctAnswerIdx]) 
-            answerButton.setAttribute("onClick","alert('CORRECT!');");
+            answerButton.addEventListener('click', function(e) {
+                alert('CORRECT!');
+            });
         else 
-            answerButton.setAttribute("onClick","alert('WRONG!!');");
+            answerButton.addEventListener('click', function(e) {
+                alert('WRONG!!');
+            });
+
         questionContainer.appendChild(answerButton);
     });
 
