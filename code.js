@@ -130,5 +130,5 @@ resetState();
 // Show questions and answers
 quizes.forEach(function(quiz) {
     addQuizToHTML(quiz);
-    parseQuiz(quiz);
+    printQuiz(quiz);
 });
